@@ -1,0 +1,6 @@
+{
+  "name": "BD ALAMIN Premium - WinGo Smart Predict & Auto Bet Suite",
+  "description": "BD ALAMIN v7.2 Smart Predict system with multi-factor ALGO engine, WinGo lottery simulator, auto-betting Martingale sequence, and Chrome extension exporter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

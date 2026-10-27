@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --g1: #00C853;
+    --g2: #00E676;
+    --g3: #69F0AE;
+    --g4: #E8F5E9;
+    --g5: #C8E6C9;
+    --gd: #2E7D32;
+    --gdd: #1B5E20;
+    --wh: #FFFFFF;
+    --su: #F6FFF6;
+    --tx: #1A2E1A;
+    --t2: #4A7044;
+    --t3: #78909C;
+    --rd: #E53935;
+    --rdl: rgba(229, 57, 53, 0.1);
+    --bl: #1E88E5;
+    --bll: rgba(30, 136, 229, 0.1);
+    --ff: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--ff);
+    background-color: #0f172a;
+    color: #f8fafc;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom BD ALAMIN Keyframes */
+@keyframes _shimmer {
+  0% { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+@keyframes _shimH {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes _pulseSlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.2; transform: scale(0.6); }
+}
+
+@keyframes _logoPulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(0, 200, 83, 0.45), 0 8px 32px rgba(0, 0, 0, 0.28);
+  }
+  50% {
+    box-shadow: 0 4px 34px rgba(0, 200, 83, 0.85), 0 8px 48px rgba(0, 200, 83, 0.35);
+  }
+}
+
+@keyframes _logoSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes _menuIn {
+  from { opacity: 0; transform: translateX(14px) scale(0.9); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes _dlgIn {
+  from { transform: translate(-50%, -50%) scale(0.85); opacity: 0; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes _chipIn {
+  from { transform: scale(0) rotate(-25deg); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes _bigPred {
+  0% { transform: scale(0.75) translateY(10px); opacity: 0; }
+  60% { transform: scale(1.08); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes _dot {
+  0%, 100% { opacity: 1; }
+  33% { opacity: 0.15; }
+  66% { opacity: 0.6; }
+}
+
+@keyframes _abPend {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+@keyframes _offPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.95; }
+}
+
+.anim-logo-pulse {
+  animation: _logoPulse 2.8s infinite ease-in-out;
+}
+
+.anim-logo-spin {
+  animation: _logoSpin 0.6s ease;
+}
+
+.anim-big-pred {
+  animation: _bigPred 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.anim-shimmer {
+  background: linear-gradient(90deg, #F0F0F0 25%, #DFFADF 50%, #F0F0F0 75%);
+  background-size: 600px 100%;
+  animation: _shimmer 1.6s infinite linear;
+}
+
+.anim-pulse-slow {
+  animation: _pulseSlow 1.4s infinite ease-in-out;
+}
+
+.anim-dot-1 {
+  animation: _dot 1.2s infinite;
+}
+.anim-dot-2 {
+  animation: _dot 1.2s infinite 0.2s;
+}
+.anim-dot-3 {
+  animation: _dot 1.2s infinite 0.4s;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 200, 83, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 200, 83, 0.6);
+}
